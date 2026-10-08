@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenvora – Online Shopping Site for Mobiles, Electronics, Furniture & More</title>
+  <meta name="description"
+    content="Shop India's best deals on Mobiles, Laptops, Fashion, Home & Electronics. Enjoy Fast Delivery, Z-Assured Quality and Easy Returns.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%235b3df5'/%3E%3Cpath d='M12 12.5h16L12 28h16' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='30.5' cy='10.5' r='3' fill='%23ffc400'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-flame" viewBox="0 0 24 24">
+        <path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z" />
+      </symbol>
+      <symbol id="i-smartphone" viewBox="0 0 24 24">
+        <rect x="7" y="2.5" width="10" height="19" rx="2" />
+        <path d="M11 18.5h2" />
+      </symbol>
+      <symbol id="i-laptop" viewBox="0 0 24 24">
+        <rect x="4" y="5" width="16" height="11" rx="1.5" />
+        <path d="M2 20h20" />
+      </symbol>
+      <symbol id="i-tv" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="12" rx="2" />
+        <path d="M8 21h8M12 17v4" />
+      </symbol>
+      <symbol id="i-shirt" viewBox="0 0 24 24">
+        <path d="M8 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5-3a4 4 0 0 1-8 0z" />
+      </symbol>
+      <symbol id="i-home" viewBox="0 0 24 24">
+        <path d="M3 11 12 3l9 8M5 10v11h14V10M10 21v-6h4v6" />
+      </symbol>
+      <symbol id="i-sofa" viewBox="0 0 24 24">
+        <path
+          d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2" />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path d="M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2z" />
+        <path d="M4 20a2 2 0 0 1 2-2h13v3H6" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m21 21-4.3-4.3" />
+      </symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24">
+        <circle cx="9" cy="20" r="1.5" />
+        <circle cx="18" cy="20" r="1.5" />
+        <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6" />
+      </symbol>
+      <symbol id="i-box" viewBox="0 0 24 24">
+        <path d="M21 8 12 3 3 8v8l9 5 9-5z" />
+        <path d="m3 8 9 5 9-5M12 13v8" />
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21a8 8 0 0 1 16 0" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3.5" />
+        <path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 20a7 7 0 0 0-4-6.3" />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z" />
+      </symbol>
+      <symbol id="i-heart-fill" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path fill="currentColor" stroke="none"
+          d="m12 2.5 3 6.5 7 .8-5.2 4.8 1.4 6.9L12 18l-6.2 3.5 1.4-6.9L2 9.8 9 9z" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" />
+        <path d="m8.5 12 2.5 2.5 5-5" />
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect x="4" y="11" width="16" height="10" rx="2" />
+        <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+      </symbol>
+      <symbol id="i-crown" viewBox="0 0 24 24">
+        <path d="m3 8 4.5 4L12 5l4.5 7L21 8l-2 11H5z" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="i-card" viewBox="0 0 24 24">
+        <rect x="2.5" y="5" width="19" height="14" rx="2" />
+        <path d="M2.5 10h19" />
+      </symbol>
+      <symbol id="i-store" viewBox="0 0 24 24">
+        <path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M9.5 20v-6h5v6" />
+      </symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24">
+        <path d="M3 12V3h9l9 9-9 9z" />
+        <circle cx="7.5" cy="7.5" r="1.3" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <path d="M4 20V10M10 20V4M16 20v-8M22 20H2" />
+      </symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24">
+        <path d="M6 2h8l5 5v15H6z" />
+        <path d="M14 2v5h5M9 13h7M9 17h7" />
+      </symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" />
+      </symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24">
+        <path d="M4 20h4L19 9l-4-4L4 16z" />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M20 6v5h-5M4 18v-5h5" />
+        <path d="M19 11a7 7 0 0 0-12-3L4 11M5 13a7 7 0 0 0 12 3l3-3" />
+      </symbol>
+      <symbol id="i-trend" viewBox="0 0 24 24">
+        <path d="m3 17 6-6 4 4 8-8M15 7h6v6" />
+      </symbol>
+      <symbol id="i-rupee" viewBox="0 0 24 24">
+        <path d="M6 4h12M6 9h12M9 4c5 0 6 2 6 5s-1 5-6 5l7 7" />
+      </symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24">
+        <path d="M5 7h14l1 14H4z" />
+        <path d="M9 7a3 3 0 0 1 6 0" />
+      </symbol>
+      <symbol id="i-save" viewBox="0 0 24 24">
+        <path d="M5 3h12l3 3v15H5z" />
+        <path d="M8 3v6h8V3M8 21v-7h8v7" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 4v11m-5-4 5 5 5-5M5 20h14" />
+      </symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24">
+        <path d="M12 16V5m-5 4 5-5 5 5M5 20h14" />
+      </symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24">
+        <path d="M2 6h12v10H2zM14 9h4l4 4v3h-8" />
+        <circle cx="7" cy="18" r="2" />
+        <circle cx="17" cy="18" r="2" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7" />
+      </symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24">
+        <path d="M13 2 4 14h7l-1 8 9-12h-7z" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-warn" viewBox="0 0 24 24">
+        <path d="M12 3 2 20h20z" />
+        <path d="M12 10v5M12 17.5v.5" />
+      </symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24">
+        <path
+          d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z" />
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 11v6M12 7.5v.5" />
+      </symbol>
+      <symbol id="i-coin" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="12" cy="12" r="5.5" />
+        <path d="M12 9.5v5" />
+      </symbol>
+      <symbol id="i-bank" viewBox="0 0 24 24">
+        <path d="M3 9 12 4l9 5zM5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" />
+      </symbol>
+      <symbol id="i-cash" viewBox="0 0 24 24">
+        <rect x="2" y="6" width="20" height="12" rx="2" />
+        <circle cx="12" cy="12" r="2.5" />
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+        <path d="M7 17 17 7M8 7h9v9" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- CUSTOMER TRUST STRIP -->
+  <div class="customer-trust-strip" aria-label="Zenvora shopping benefits">
+    <span>✓ Secure checkout</span>
+    <span>✓ Easy returns</span>
+    <span>✓ Free delivery on eligible orders</span>
+    <span>✓ Genuine product listings</span>
+  </div>
+
+  <!-- STOREFRONT WRAPPER (Shown in Store Mode) -->
+  <div id="storefrontView">
+
+    <!-- =========================================================================
+         2. ZENVORA ICONIC MAIN HEADER
+         ========================================================================= -->
+    <header class="site-header">
+      <div class="header-container">
+
+        <!-- Zenvora Logo & Plus -->
+        <a href="#" class="brand-wrapper" id="brandLogoHome" aria-label="Zenvora Home">
+          <div class="brand-main">
+            <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+              <defs>
+                <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#7c5cff" />
+                  <stop offset="1" stop-color="#2f6bff" />
+                </linearGradient>
+              </defs>
+              <rect width="40" height="40" rx="11" fill="#fff" />
+              <path d="M12 12.5h16L12 28h16" fill="none" stroke="url(#zg)" stroke-width="4" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="30.5" cy="10.5" r="3" fill="#ffc400" />
+            </svg>
+            <span class="brand-name" id="hdrBrandName">Zenvora</span>
+          </div>
+          <div class="brand-sub"><span>Shop smarter. Live better.</span></div>
+        </a>
+
+        <!-- Search Bar with Live Suggestions -->
+        <div class="search-wrapper" id="searchContainer">
+          <div class="search-box">
+            <input type="text" id="globalSearchInput" class="search-input"
+              placeholder="Search for Products, Brands and More" autocomplete="off"
+              aria-label="Search Zenvora products">
+            <button class="search-clear-btn" id="clearSearchBtn" hidden aria-label="Clear Search"><svg class="ic"
+                aria-hidden="true">
+                <use href="#i-x" />
+              </svg></button>
+            <button class="search-submit-btn" id="submitSearchBtn" aria-label="Search Button"><svg class="ic"
+                aria-hidden="true">
+                <use href="#i-search" />
+              </svg></button>
+          </div>
+
+          <!-- Live Autocomplete Dropdown -->
+          <div class="search-suggestions" id="searchSuggestionsBox">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Deliver To Location Pill -->
+        <button class="pincode-deliver-btn" id="headerLocationBtn" title="Set Delivery Location">
+          <span><svg class="ic" aria-hidden="true">
+              <use href="#i-pin" />
+            </svg></span>
+          <span>Deliver to: <b id="hdrLocationText">Mumbai 400001</b></span>
+        </button>
+
+        <!-- Header Actions: Account, Wishlist & Cart -->
+        <div class="header-actions">
+
+          <!-- Account Dropdown -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-account-btn" id="accountMenuBtn" aria-haspopup="true">
+              <span><svg class="ic" aria-hidden="true">
+                  <use href="#i-user" />
+                </svg></span>
+              <span id="accountBtnText">Sign In</span>
+              <span style="font-size:10px">▾</span>
+            </button>
+            <div class="nav-dropdown-menu" id="accountDropdown">
+              <div class="nav-dropdown-header">
+                <span>Welcome to Zenvora</span>
+                <b id="hdrUserRole">Customer</b>
+              </div>
+              <div class="nav-dropdown-item" id="menuMyProfile">
+                <span><svg class="ic" aria-hidden="true">
+                    <use href="#i-user" />
+                  </svg></span> My Profile
+              </div>
+              <div class="nav-dropdown-item" id="menuMyOrders">
+                <span><svg class="ic" aria-hidden="true">
+                    <use href="#i-box" />
+                  </svg></span> Orders &amp; Tracking
+              </div>
+              <div class="nav-dropdown-item" id="menuWishlist">
+                <span><svg class="ic" aria-hidden="true">
+                    <use href="#i-heart-fill" />
+                  </svg></span> Wishlist (<b id="menuWishCount">0</b>)
+              </div>
+              <div class="nav-dropdown-item" id="menuSuperCoins">
+                <span><svg class="ic" aria-hidden="true">
+                    <use href="#i-coin" />
+                  </svg></span> Zen Coins (<b>250 Coins</b>)
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist Direct Button -->
+          <button class="header-link-btn" id="headerWishlistBtn" title="Wishlist">
+            <span><svg class="ic" aria-hidden="true">
+                <use href="#i-heart-fill" />
+              </svg></span>
+            <span>Wishlist</span>
+            <span class="badge-count" id="wishlistBadge">0</span>
+          </button>
+
+          <!-- Cart Direct Button -->
+          <button type="button" class="header-link-btn" id="headerCartBtn" title="Shopping Cart"
+            onclick="window.ZenvoraApp?.openCartDrawer()">
+            <span><svg class="ic" aria-hidden="true">
+                <use href="#i-cart" />
+              </svg></span>
+            <span>Cart</span>
+            <span class="badge-count" id="cartBadge">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================================
+         3. CATEGORY NAVIGATION STRIP
+         ========================================================================= -->
+    <nav class="category-strip" aria-label="Product Categories">
+      <div class="category-container" id="categoryStrip">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </nav>
+
+    <!-- =========================================================================
+         4. MAIN CONTENT AREA
+         ========================================================================= -->
+    <main class="main-wrapper">
+
+      <!-- Hero Banner Slider -->
+      <section class="hero-slider-section" id="heroBannerSection">
+        <div class="hero-slider" id="heroSlider">
+
+          <!-- Slide 1 -->
+          <div class="hero-slide slide-1 active" data-slide="0">
+            <div class="slide-content">
+              <span class="slide-badge"><svg class="ic" aria-hidden="true">
+                  <use href="#i-bolt" />
+                </svg> THE MEGA SAVINGS FEST</span>
+              <h1 class="slide-title">Mega Savings.<br>Unbeatable Prices.</h1>
+              <p class="slide-subtitle">Flat 40% to 80% off on Smartphones, Laptops &amp; 4K TVs.</p>
+              <button class="slide-cta-btn" data-banner-cat="Electronics">Shop Deals Now <svg class="ic"
+                  aria-hidden="true">
+                  <use href="#i-arrow-right" />
+                </svg></button>
+            </div>
+            <div class="slide-image-box">
+              <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80"
+                alt="Flagship Smartphones">
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="hero-slide slide-2" data-slide="1">
+            <div class="slide-content">
+              <span class="slide-badge"><svg class="ic" aria-hidden="true">
+                  <use href="#i-shirt" />
+                </svg> FASHION BLOCKBUSTER</span>
+              <h2 class="slide-title">Trending Styles.<br>Top Indian Brands.</h2>
+              <p class="slide-subtitle">Extra ₹500 off on first order with coupon code ZENVORA50.</p>
+              <button class="slide-cta-btn" data-banner-cat="Fashion">Explore Fashion <svg class="ic"
+                  aria-hidden="true">
+                  <use href="#i-arrow-right" />
+                </svg></button>
+            </div>
+            <div class="slide-image-box">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                alt="Fashion Footwear">
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="hero-slide slide-3" data-slide="2">
+            <div class="slide-content">
+              <span class="slide-badge"><svg class="ic" aria-hidden="true">
+                  <use href="#i-tv" />
+                </svg> APPLIANCES FEST</span>
+              <h2 class="slide-title">Smart Living.<br>Home Upgrades.</h2>
+              <p class="slide-subtitle">No cost EMI up to 24 months on Refrigerators &amp; Washers.</p>
+              <button class="slide-cta-btn" data-banner-cat="TV & Appliances">View Appliances <svg class="ic"
+                  aria-hidden="true">
+                  <use href="#i-arrow-right" />
+                </svg></button>
+            </div>
+            <div class="slide-image-box">
+              <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=600&q=80"
+                alt="Home Appliances">
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="hero-slide slide-4" data-slide="3">
+            <div class="slide-content">
+              <span class="slide-badge"><svg class="ic" aria-hidden="true">
+                  <use href="#i-sparkle" />
+                </svg> BEAUTY &amp; WELLNESS</span>
+              <h2 class="slide-title">Glow Up Season.<br>100% Genuine.</h2>
+              <p class="slide-subtitle">Dermatologist recommended skincare &amp; luxury fragrances.</p>
+              <button class="slide-cta-btn" data-banner-cat="Beauty">Discover Beauty <svg class="ic" aria-hidden="true">
+                  <use href="#i-arrow-right" />
+                </svg></button>
+            </div>
+            <div class="slide-image-box">
+              <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&q=80"
+                alt="Skincare">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Navigation -->
+        <button class="slider-arrow prev" id="sliderPrevBtn" aria-label="Previous Slide">‹</button>
+        <button class="slider-arrow next" id="sliderNextBtn" aria-label="Next Slide">›</button>
+        <div class="slider-dots" id="sliderDots">
+          <span class="slider-dot active" data-dot="0"></span>
+          <span class="slider-dot" data-dot="1"></span>
+          <span class="slider-dot" data-dot="2"></span>
+          <span class="slider-dot" data-dot="3"></span>
+        </div>
+      </section>
+
+      <!-- Bank Offers Ribbon -->
+      <div class="bank-offers-ribbon">
+        <div class="bank-offer-text">
+          <span class="bank-badge">BANK OFFER</span>
+          <span>10% Instant Discount on HDFC Bank Credit Cards &amp; EMI transactions | Min purchase ₹5,000</span>
+        </div>
+        <div class="bank-offer-text">
+          <span class="bank-badge">ZEN COINS</span>
+          <span>Use 50 Zen Coins to get extra ₹250 Off on eligible products</span>
+        </div>
+      </div>
+
+      <!-- Deals of the Day Flash Sale Section -->
+      <section class="deals-section">
+        <div class="deals-header">
+          <div class="deals-title-wrap">
+            <h2 class="deals-title"><svg class="ic" aria-hidden="true">
+                <use href="#i-flame" />
+              </svg> Deals of the Day</h2>
+            <div class="deals-timer">
+              <span>Ends in:</span>
+              <span class="deals-timer-time" id="countdownTimer">07h : 38m : 45s</span>
+            </div>
+          </div>
+          <button class="view-all-deals-btn" id="dealsViewAllBtn">View All Deals</button>
+        </div>
+
+        <!-- Deals Highlight Cards -->
+        <div class="product-grid" id="flashDealsGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Catalog Layout: Filters Sidebar + Products Grid -->
+      <div class="catalog-container">
+
+        <!-- Filter Sidebar -->
+        <aside class="filter-sidebar" id="filterSidebar">
+          <div class="filter-header">
+            <h3>Filters</h3>
+            <button class="clear-filters-btn" id="clearAllFiltersBtn">CLEAR ALL</button>
+          </div>
+
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <h4>Categories</h4>
+            <div class="filter-options" id="categoryFilterList">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <div class="price-range-inputs">
+              <select id="minPriceSelect">
+                <option value="0">Min (₹0)</option>
+                <option value="1000">₹1,000</option>
+                <option value="5000">₹5,000</option>
+                <option value="15000">₹15,000</option>
+                <option value="30000">₹30,000</option>
+              </select>
+              <span>to</span>
+              <select id="maxPriceSelect">
+                <option value="999999">Max (₹1,00,000+)</option>
+                <option value="2000">₹2,000</option>
+                <option value="10000">₹10,000</option>
+                <option value="25000">₹25,000</option>
+                <option value="60000">₹60,000</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Zenvora Assured Filter -->
+          <div class="filter-group">
+            <h4>Z-Assured</h4>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="fAssuredFilter">
+              <span class="f-assured-pill"><svg class="ic" aria-hidden="true">
+                  <use href="#i-shield" />
+                </svg> Assured</span>
+            </label>
+          </div>
+
+          <!-- Customer Ratings Filter -->
+          <div class="filter-group">
+            <h4>Customer Ratings</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox-label">
+                <input type="checkbox" class="rating-filter" value="4"> 4<svg class="ic" aria-hidden="true">
+                  <use href="#i-star" />
+                </svg> &amp; above
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox" class="rating-filter" value="3"> 3<svg class="ic" aria-hidden="true">
+                  <use href="#i-star" />
+                </svg> &amp; above
+              </label>
+            </div>
+          </div>
+
+          <!-- Availability Filter -->
+          <div class="filter-group">
+            <h4>Availability</h4>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="inStockFilter" checked>
+              <span>Exclude Out of Stock</span>
+            </label>
+          </div>
+
+        </aside>
+
+        <!-- Catalog Main Content -->
+        <section class="catalog-content">
+
+          <!-- Top Sort & Results Bar -->
+          <div class="catalog-topbar">
+            <div class="results-count" id="catalogResultsCount">
+              Showing <b>15</b> products
+            </div>
+            <div class="sort-options">
+              <span class="sort-label">Sort By:</span>
+              <button class="sort-btn active" data-sort="popularity">Popularity</button>
+              <button class="sort-btn" data-sort="price-asc">Price -- Low to High</button>
+              <button class="sort-btn" data-sort="price-desc">Price -- High to Low</button>
+              <button class="sort-btn" data-sort="rating">Customer Rating</button>
+              <button class="sort-btn" data-sort="newest">Newest First</button>
+            </div>
+          </div>
+
+          <!-- Main Product Grid -->
+          <div class="product-grid" id="mainProductsGrid">
+            <!-- Populated dynamically by JavaScript -->
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- =========================================================================
+         5. ZENVORA STYLE FOOTER WITH CREATOR HIGHLIGHT
+         ========================================================================= -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4>ABOUT</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="ftrContactUs">Contact Us</a></li>
+            <li><a href="#" id="ftrAboutUs">About Us</a></li>
+            <li><a href="#" id="ftrCareers">Careers</a></li>
+            <li><a href="#" id="ftrZenvoraStories">Zenvora Stories</a></li>
+            <li><a href="#" id="ftrPress">Press</a></li>
+            <li><a href="#" id="ftrCorporate">Corporate Information</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>HELP</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="ftrPayments">Payments</a></li>
+            <li><a href="#" id="ftrShipping">Shipping</a></li>
+            <li><a href="#" id="ftrCancellation">Cancellation &amp; Returns</a></li>
+            <li><a href="#" id="ftrFAQ">FAQ</a></li>
+            <li><a href="#" id="ftrReportInfringement">Report Infringement</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CONSUMER POLICY</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="ftrCancellationPolicy">Cancellation Policy</a></li>
+            <li><a href="#" id="ftrTermsOfUse">Terms Of Use</a></li>
+            <li><a href="#" id="ftrSecurity">Security</a></li>
+            <li><a href="#" id="ftrPrivacy">Privacy</a></li>
+            <li><a href="#" id="ftrSitemap">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>MAIL US</h4>
+          <p style="line-height:1.6; margin-bottom:8px">
+            Zenvora Retail Pvt. Ltd.,<br>
+            [Add your registered address here],<br>
+            support@your-domain.com
+          </p>
+        </div>
+
+        <!-- Creator Showcase Highlight Card in Footer -->
+        <div class="footer-col">
+          <div class="footer-creator-highlight">
+            <h4><svg class="ic" aria-hidden="true">
+                <use href="#i-crown" />
+              </svg> ARCHITECT &amp; OWNER</h4>
+            <p id="ftrCreatorBio">This premier Zenvora e-commerce application and exclusive backoffice administration
+              engine was completely engineered by <strong id="ftrCreatorName">Store Creator &amp; Admin</strong>.</p>
+            <button class="slide-cta-btn" id="ftrCreatorBioBtn" style="padding:6px 14px; font-size:12px">
+              View Creator Showcase <svg class="ic" aria-hidden="true">
+                <use href="#i-arrow-up-right" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 <span id="ftrBrandCopy">Zenvora</span>. Handcrafted with passion by <span id="ftrOwnerCopy">Store
+            Creator &amp; Admin</span>. All rights reserved.
+        </div>
+        <div class="footer-payment-icons">
+          <span><svg class="ic" aria-hidden="true">
+              <use href="#i-card" />
+            </svg> Visa</span>
+          <span><svg class="ic" aria-hidden="true">
+              <use href="#i-card" />
+            </svg> MasterCard</span>
+          <span><svg class="ic" aria-hidden="true">
+              <use href="#i-smartphone" />
+            </svg> UPI</span>
+          <span><svg class="ic" aria-hidden="true">
+              <use href="#i-bank" />
+            </svg> NetBanking</span>
+          <span><svg class="ic" aria-hidden="true">
+              <use href="#i-cash" />
+            </svg> Cash on Delivery</span>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- End #storefrontView -->
+
+
+
+
+
+
+  <!-- =========================================================================
+       16. LOCATION SELECTOR PROMPT MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="locationModalOverlay">
+    <div class="admin-modal-card" style="max-width:420px; text-align:center">
+      <div style="font-size:36px; margin-bottom:10px"><svg class="ic" aria-hidden="true">
+          <use href="#i-pin" />
+        </svg></div>
+      <h3 style="font-size:18px; margin-bottom:8px">Select Delivery Location</h3>
+      <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px">Enter your delivery city &amp; pincode to
+        see accurate delivery speed and local deals.</p>
+      <input type="text" id="locCityInput" placeholder="Enter City (e.g. Mumbai, Bengaluru, Delhi)"
+        style="width:100%; margin-bottom:8px">
+      <input type="text" id="locPinInput" placeholder="Enter 6-digit Pincode (e.g. 400001)" maxlength="6"
+        style="width:100%; margin-bottom:16px">
+      <div style="display:flex; gap:10px">
+        <button class="btn-admin-primary" id="saveLocationBtn" style="flex:1; justify-content:center">Save
+          Location</button>
+        <button class="btn-admin-secondary" id="closeLocationModalBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       17. GLOBAL TOAST NOTIFICATION CONTAINER
+       ========================================================================= -->
+  <div class="toast-notice" id="globalToast" role="status" aria-live="polite">
+    <span id="toastIcon"><svg class="ic" aria-hidden="true">
+        <use href="#i-info" />
+      </svg></span>
+    <span id="toastMessage">Action completed successfully</span>
+  </div>
+
+  <!-- FIRST-VISIT WELCOME / LOCATION PROMPT -->
+
+  <!-- CUSTOMER CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-drawer-header">
+      <h3>🛒 My Cart (<span id="cartCountTitle">0</span>)</h3>
+      <button type="button" class="cart-drawer-close" id="closeCartBtn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerBody"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-footer-total"><small>Total</small><strong id="cartFooterTotal">₹0</strong></div>
+      <button type="button" class="btn-card-buy" id="cartProceedCheckoutBtn">PROCEED TO CHECKOUT</button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT DETAILS -->
+  <div class="modal-overlay" id="productDetailModalOverlay">
+    <div class="modal-card" style="max-width:1000px;max-height:92vh;overflow:auto">
+      <button type="button" class="modal-close-btn" id="closePdpModalBtn" aria-label="Close">✕</button>
+      <div id="pdpBreadcrumb" style="font-size:12px;color:#777;margin-bottom:12px"></div>
+      <div style="display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,1.2fr);gap:24px">
+        <div>
+          <div
+            style="height:360px;background:#fff;border:1px solid #eee;border-radius:10px;display:flex;align-items:center;justify-content:center">
+            <img id="pdpMainImg" src="" alt="Product" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div id="pdpThumbStrip" style="display:flex;gap:8px;margin-top:10px;overflow:auto"></div>
+        </div>
+        <div>
+          <h2 id="pdpTitle" style="margin-bottom:10px"></h2>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+            <span id="pdpRating" class="rating-pill"></span>
+            <span id="pdpReviewsText" style="font-size:12px;color:#777"></span>
+            <span id="pdpAssuredBadge" class="f-assured-pill" style="display:none">✓ Assured</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <strong id="pdpPrice" style="font-size:28px"></strong>
+            <span id="pdpMrp" style="text-decoration:line-through;color:#888"></span>
+            <span id="pdpOff" style="color:#16833b;font-weight:700"></span>
+          </div>
+          <p id="pdpSaveNote" style="color:#16833b;font-size:13px;margin-bottom:16px"></p>
+          <div style="display:flex;gap:10px;margin-bottom:20px">
+            <button type="button" class="btn-card-cart" id="pdpAddToCartBtn">ADD TO CART</button>
+            <button type="button" class="btn-card-buy" id="pdpBuyNowBtn">BUY NOW</button>
+          </div>
+          <div style="border-top:1px solid #eee;padding-top:14px">
+            <h3>Delivery</h3>
+            <div style="display:flex;gap:8px;margin:8px 0">
+              <input id="pdpPincodeInput" inputmode="numeric" maxlength="6" placeholder="Enter pincode"
+                style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px">
+              <button type="button" id="pdpCheckPinBtn" class="btn-admin-secondary">Check</button>
+            </div>
+            <p id="pdpDeliveryStatus" style="font-size:12px;color:#555"></p>
+          </div>
+          <div style="margin-top:18px">
+            <h3>Specifications</h3>
+            <table style="width:100%;border-collapse:collapse;margin-top:8px">
+              <tbody id="pdpSpecsTable"></tbody>
+            </table>
+          </div>
+          <div style="margin-top:18px">
+            <h3>Reviews</h3>
+            <div id="pdpReviewsList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT -->
+  <div class="modal-overlay" id="checkoutModalOverlay">
+    <div class="modal-card" style="max-width:1050px;max-height:92vh;overflow:auto">
+      <button type="button" class="modal-close-btn" id="closeCheckoutModalBtn" aria-label="Close">✕</button>
+      <h2 style="margin-bottom:18px">Secure Checkout</h2>
+      <div style="display:grid;grid-template-columns:1.35fr .85fr;gap:20px">
+        <div>
+          <div class="checkout-step-card">
+            <div class="checkout-step-title"><span class="step-num-badge">1</span><span>DELIVERY DETAILS</span></div>
+            <div class="checkout-form-grid">
+              <input id="coName" placeholder="Full name" required>
+              <input id="coPhone" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" required>
+              <input id="coCity" placeholder="City" required>
+              <input id="coPincode" placeholder="6-digit pincode" inputmode="numeric" maxlength="6" required>
+              <textarea id="coAddress" placeholder="Flat / house / street / area" rows="3" required
+                style="grid-column:1/-1"></textarea>
+            </div>
+          </div>
+          <div class="checkout-step-card">
+            <div class="checkout-step-title"><span class="step-num-badge">2</span><span>ORDER SUMMARY</span></div>
+            <div id="checkoutItemsList"></div>
+          </div>
+          <div class="checkout-step-card">
+            <div class="checkout-step-title"><span class="step-num-badge">3</span><span>PAYMENT OPTIONS</span></div>
+            <div id="paymentTabs">
+              <label class="payment-tab-row"><input type="radio" name="checkoutPayment" value="upi">
+                <div class="payment-tab-info"><b>UPI</b><small>Google Pay, PhonePe, Paytm and other UPI apps</small>
+                </div>
+              </label>
+              <div class="payment-detail-pane" id="paneUpi">
+                <div style="display:flex;gap:8px"><input id="coUpiId" placeholder="name@upi" style="flex:1"><button
+                    type="button" id="verifyUpiBtn" class="btn-admin-secondary">Verify</button></div>
+              </div>
+              <label class="payment-tab-row"><input type="radio" name="checkoutPayment" value="card">
+                <div class="payment-tab-info"><b>Card</b><small>Credit / Debit card</small></div>
+              </label>
+              <div class="payment-detail-pane" id="paneCard" hidden>
+                <div style="display:flex;gap:8px;flex-wrap:wrap"><input id="coCardNum" placeholder="Card number"
+                    maxlength="19"><input id="coCardExp" placeholder="MM/YY" maxlength="5"><input id="coCardCvv"
+                    placeholder="CVV" maxlength="3"></div>
+              </div>
+              <label class="payment-tab-row selected"><input type="radio" name="checkoutPayment" value="cod" checked>
+                <div class="payment-tab-info"><b>Cash on Delivery</b><small>Pay when your order arrives</small></div>
+              </label>
+              <div class="payment-detail-pane" id="paneCod">
+                <p>Pay at delivery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="price-breakdown-card" style="height:max-content">
+          <h3>PRICE DETAILS</h3>
+          <div class="breakdown-row"><span id="coSumItemsLabel">Price (0 Items)</span><span id="coSumMrpTotal">₹0</span>
+          </div>
+          <div class="breakdown-row discount-green"><span>Discount</span><span id="coSumDiscount">₹0</span></div>
+          <div class="breakdown-row"><span>Delivery</span><span id="coSumDelivery">FREE</span></div>
+          <div class="breakdown-row"><span>Packaging Fee</span><span id="coSumPackaging">₹0</span></div>
+          <div class="breakdown-total-row"><span>Total</span><span id="coSumFinalPayable">₹0</span></div>
+          <p id="coSumSavingsNote" style="color:#16833b;font-size:12px;margin-top:8px"></p>
+          <button type="button" id="coSubmitPaymentBtn" class="btn-card-buy" style="width:100%;margin-top:16px">CONFIRM
+            &amp; PAY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS -->
+  <div class="modal-overlay" id="orderSuccessModalOverlay">
+    <div class="modal-card" style="max-width:480px;text-align:center">
+      <div style="font-size:52px">✅</div>
+      <h2>Order Placed!</h2>
+      <p id="successOrderIdDisplay"></p>
+      <p>Estimated delivery:</p><strong id="successDeliveryDate"></strong>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px">
+        <button type="button" class="btn-admin-secondary" id="trackOrderSuccessBtn">Track Order</button>
+        <button type="button" class="btn-card-buy" id="continueShoppingSuccessBtn">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="first-visit-overlay" id="firstVisitOverlay" role="dialog" aria-modal="true"
+    aria-labelledby="firstVisitTitle">
+    <div class="first-visit-card">
+      <div class="first-visit-logo">Z</div>
+      <h2 id="firstVisitTitle">Welcome to Zenvora</h2>
+      <p>Create a free account for faster checkout, order tracking and exclusive deals. You can also browse as a guest
+        anytime.</p>
+      <div class="first-visit-location">
+        <strong>📍 Set your delivery location</strong>
+        <span>Choose your city and pincode to see accurate delivery availability, speed and local deals.</span>
+      </div>
+      <div class="first-visit-actions">
+        <button class="first-visit-primary" id="firstVisitBrowseBtn">Create Account / Sign Up</button>
+        <button class="first-visit-secondary" id="firstVisitLocationBtn">Set Delivery Location</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT ENGINE -->
+<script type="module" src="script.js"></script>
+</body>
+
+</html>
