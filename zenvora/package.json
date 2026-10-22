@@ -1,0 +1,9 @@
+{
+  "name": "zenvora-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zenvora storefront + admin backend",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^5.1.0" }
+}

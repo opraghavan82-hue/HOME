@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Zenvora Admin — Owner Control</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xm…l='%23ffc400'/%3E%3C/svg%3E">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-admin-page="true">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-flame" viewBox="0 0 24 24">
+                <path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z" />
+            </symbol>
+            <symbol id="i-smartphone" viewBox="0 0 24 24">
+                <rect x="7" y="2.5" width="10" height="19" rx="2" />
+                <path d="M11 18.5h2" />
+            </symbol>
+            <symbol id="i-laptop" viewBox="0 0 24 24">
+                <rect x="4" y="5" width="16" height="11" rx="1.5" />
+                <path d="M2 20h20" />
+            </symbol>
+            <symbol id="i-tv" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="12" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+            </symbol>
+            <symbol id="i-shirt" viewBox="0 0 24 24">
+                <path d="M8 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5-3a4 4 0 0 1-8 0z" />
+            </symbol>
+            <symbol id="i-home" viewBox="0 0 24 24">
+                <path d="M3 11 12 3l9 8M5 10v11h14V10M10 21v-6h4v6" />
+            </symbol>
+            <symbol id="i-sofa" viewBox="0 0 24 24">
+                <path
+                    d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2" />
+            </symbol>
+            <symbol id="i-book" viewBox="0 0 24 24">
+                <path d="M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2z" />
+                <path d="M4 20a2 2 0 0 1 2-2h13v3H6" />
+            </symbol>
+            <symbol id="i-search" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m21 21-4.3-4.3" />
+            </symbol>
+            <symbol id="i-cart" viewBox="0 0 24 24">
+                <circle cx="9" cy="20" r="1.5" />
+                <circle cx="18" cy="20" r="1.5" />
+                <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6" />
+            </symbol>
+            <symbol id="i-box" viewBox="0 0 24 24">
+                <path d="M21 8 12 3 3 8v8l9 5 9-5z" />
+                <path d="m3 8 9 5 9-5M12 13v8" />
+            </symbol>
+            <symbol id="i-user" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+            </symbol>
+            <symbol id="i-users" viewBox="0 0 24 24">
+                <circle cx="9" cy="8" r="3.5" />
+                <path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 20a7 7 0 0 0-4-6.3" />
+            </symbol>
+            <symbol id="i-heart" viewBox="0 0 24 24">
+                <path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z" />
+            </symbol>
+            <symbol id="i-heart-fill" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z" />
+            </symbol>
+            <symbol id="i-star" viewBox="0 0 24 24">
+                <path fill="currentColor" stroke="none"
+                    d="m12 2.5 3 6.5 7 .8-5.2 4.8 1.4 6.9L12 18l-6.2 3.5 1.4-6.9L2 9.8 9 9z" />
+            </symbol>
+            <symbol id="i-shield" viewBox="0 0 24 24">
+                <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" />
+                <path d="m8.5 12 2.5 2.5 5-5" />
+            </symbol>
+            <symbol id="i-lock" viewBox="0 0 24 24">
+                <rect x="4" y="11" width="16" height="10" rx="2" />
+                <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+            </symbol>
+            <symbol id="i-crown" viewBox="0 0 24 24">
+                <path d="m3 8 4.5 4L12 5l4.5 7L21 8l-2 11H5z" />
+            </symbol>
+            <symbol id="i-plus" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </symbol>
+            <symbol id="i-pin" viewBox="0 0 24 24">
+                <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z" />
+                <circle cx="12" cy="10" r="2.5" />
+            </symbol>
+            <symbol id="i-card" viewBox="0 0 24 24">
+                <rect x="2.5" y="5" width="19" height="14" rx="2" />
+                <path d="M2.5 10h19" />
+            </symbol>
+            <symbol id="i-store" viewBox="0 0 24 24">
+                <path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M9.5 20v-6h5v6" />
+            </symbol>
+            <symbol id="i-tag" viewBox="0 0 24 24">
+                <path d="M3 12V3h9l9 9-9 9z" />
+                <circle cx="7.5" cy="7.5" r="1.3" />
+            </symbol>
+            <symbol id="i-chart" viewBox="0 0 24 24">
+                <path d="M4 20V10M10 20V4M16 20v-8M22 20H2" />
+            </symbol>
+            <symbol id="i-doc" viewBox="0 0 24 24">
+                <path d="M6 2h8l5 5v15H6z" />
+                <path d="M14 2v5h5M9 13h7M9 17h7" />
+            </symbol>
+            <symbol id="i-gear" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" />
+            </symbol>
+            <symbol id="i-edit" viewBox="0 0 24 24">
+                <path d="M4 20h4L19 9l-4-4L4 16z" />
+            </symbol>
+            <symbol id="i-refresh" viewBox="0 0 24 24">
+                <path d="M20 6v5h-5M4 18v-5h5" />
+                <path d="M19 11a7 7 0 0 0-12-3L4 11M5 13a7 7 0 0 0 12 3l3-3" />
+            </symbol>
+            <symbol id="i-trend" viewBox="0 0 24 24">
+                <path d="m3 17 6-6 4 4 8-8M15 7h6v6" />
+            </symbol>
+            <symbol id="i-rupee" viewBox="0 0 24 24">
+                <path d="M6 4h12M6 9h12M9 4c5 0 6 2 6 5s-1 5-6 5l7 7" />
+            </symbol>
+            <symbol id="i-bag" viewBox="0 0 24 24">
+                <path d="M5 7h14l1 14H4z" />
+                <path d="M9 7a3 3 0 0 1 6 0" />
+            </symbol>
+            <symbol id="i-save" viewBox="0 0 24 24">
+                <path d="M5 3h12l3 3v15H5z" />
+                <path d="M8 3v6h8V3M8 21v-7h8v7" />
+            </symbol>
+            <symbol id="i-download" viewBox="0 0 24 24">
+                <path d="M12 4v11m-5-4 5 5 5-5M5 20h14" />
+            </symbol>
+            <symbol id="i-upload" viewBox="0 0 24 24">
+                <path d="M12 16V5m-5 4 5-5 5 5M5 20h14" />
+            </symbol>
+            <symbol id="i-truck" viewBox="0 0 24 24">
+                <path d="M2 6h12v10H2zM14 9h4l4 4v3h-8" />
+                <circle cx="7" cy="18" r="2" />
+                <circle cx="17" cy="18" r="2" />
+            </symbol>
+            <symbol id="i-check" viewBox="0 0 24 24">
+                <path d="m5 12.5 4.5 4.5L19 7" />
+            </symbol>
+            <symbol id="i-bolt" viewBox="0 0 24 24">
+                <path d="M13 2 4 14h7l-1 8 9-12h-7z" />
+            </symbol>
+            <symbol id="i-x" viewBox="0 0 24 24">
+                <path d="M6 6l12 12M18 6 6 18" />
+            </symbol>
+            <symbol id="i-warn" viewBox="0 0 24 24">
+                <path d="M12 3 2 20h20z" />
+                <path d="M12 10v5M12 17.5v.5" />
+            </symbol>
+            <symbol id="i-sparkle" viewBox="0 0 24 24">
+                <path
+                    d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z" />
+            </symbol>
+            <symbol id="i-info" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 11v6M12 7.5v.5" />
+            </symbol>
+            <symbol id="i-coin" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5.5" />
+                <path d="M12 9.5v5" />
+            </symbol>
+            <symbol id="i-bank" viewBox="0 0 24 24">
+                <path d="M3 9 12 4l9 5zM5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" />
+            </symbol>
+            <symbol id="i-cash" viewBox="0 0 24 24">
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <circle cx="12" cy="12" r="2.5" />
+            </symbol>
+            <symbol id="i-arrow-right" viewBox="0 0 24 24">
+                <path d="M5 12h14m-6-6 6 6-6 6" />
+            </symbol>
+            <symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+                <path d="M7 17 17 7M8 7h9v9" />
+            </symbol>
+            <symbol id="i-phone" viewBox="0 0 24 24">
+                <path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" />
+            </symbol>
+        </defs>
+    </svg>
+    <!-- =========================================================================
+       6. EXCLUSIVE OWNER ADMIN PANEL (Completely private to the creator)
+       ========================================================================= -->
+    <div class="admin-view-root" id="adminViewRoot">
+
+        <!-- Admin Top Header -->
+        <header class="admin-navbar">
+            <div class="admin-nav-left">
+                <div class="admin-brand-tag">
+                    <span class="admin-crown-badge"><svg class="ic" aria-hidden="true">
+                            <use href="#i-crown" />
+                        </svg> OWNER CONTROL</span>
+                    <span id="admBrandTitle">Zenvora Management Console</span>
+                </div>
+            </div>
+            <div class="admin-nav-right">
+                <span class="admin-nav-identity" style="font-size:12px; color:#adb5bd">Logged in as: <strong
+                        style="color:var(--zv-yellow)" id="admOwnerIdentity">Store Creator &amp; Admin</strong></span>
+                <button class="btn-exit-admin" id="admExitToStoreBtn" aria-label="Exit to storefront"
+                    title="Exit to storefront">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-store" />
+                    </svg> <span class="btn-label">Exit to Storefront</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Admin Body Layout -->
+        <div class="admin-body-layout">
+
+            <!-- Admin Sidebar -->
+            <aside class="admin-sidebar">
+                <div class="admin-sidebar-section-title">CORE OPERATIONS</div>
+                <div class="admin-menu-item active" data-pane="admPaneDashboard">
+                    <span><svg class="ic" aria-hidden="true">
+                            <use href="#i-chart" />
+                        </svg></span> <span>Dashboard &amp; Sales</span>
+                </div>
+                <div class="admin-menu-item" data-pane="admPaneProducts">
+                    <span><svg class="ic" aria-hidden="true">
+                            <use href="#i-box" />
+                        </svg></span> <span>Products Catalog</span>
+                    <span class="admin-menu-badge" id="admProductBadge">15</span>
+                </div>
+                <div class="admin-menu-item" data-pane="admPaneOrders">
+                    <span><svg class="ic" aria-hidden="true">
+                            <use href="#i-doc" />
+                        </svg></span> <span>Orders &amp; Fulfillment</span>
+                    <span class="admin-menu-badge" id="admOrderBadge">0</span>
+                </div>
+                <div class="admin-menu-item" data-pane="admPaneCoupons">
+                    <span><svg class="ic" aria-hidden="true">
+                            <use href="#i-tag" />
+                        </svg></span> <span>Coupons &amp; Offers</span>
+                </div>
+                <div class="admin-menu-item" data-pane="admPaneCustomers">
+                    <span><svg class="ic" aria-hidden="true">
+                            <use href="#i-users" />
+                        </svg></span> <span>Customer Directory</span>
+                </div>
+
+                <div class="admin-sidebar-section-title" style="margin-top:16px">CONFIGURATION</div>
+                <div class="admin-menu-item" data-pane="admPaneSettings">
+                    <span><svg class="ic" aria-hidden="true">
+                            <use href="#i-gear" />
+                        </svg></span> <span>Store &amp; Creator Settings</span>
+                </div>
+
+                <!-- Creator Profile Card in Admin Sidebar -->
+                <div class="admin-creator-card">
+                    <h5>Website Creator</h5>
+                    <p id="admSidebarCreatorName">Store Creator &amp; Admin</p>
+                    <span class="btn-edit-creator-inline" id="admQuickEditCreatorBtn">Edit creator branding <svg
+                            class="ic" aria-hidden="true">
+                            <use href="#i-edit" />
+                        </svg></span>
+                </div>
+            </aside>
+
+            <!-- Admin Main Area -->
+            <main class="admin-main-area">
+
+                <!-- PANE 1: DASHBOARD & ANALYTICS -->
+                <section class="admin-pane active" id="admPaneDashboard">
+                    <div class="admin-page-header">
+                        <div>
+                            <h1>Store Executive Overview</h1>
+                            <p>Real-time analytics, revenue trajectory, and fulfillment throughput.</p>
+                        </div>
+                        <div class="admin-actions-bar">
+                            <button class="btn-admin-primary" id="admNewProductTopBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-plus" />
+                                </svg> Add New Product
+                            </button>
+                            <button class="btn-admin-secondary" id="admResetDemoDataBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-refresh" />
+                                </svg> Reset Sample Catalog
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- KPI Metric Cards -->
+                    <div class="admin-metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h4>Total Revenue</h4>
+                                <div class="metric-val" id="admKpiRevenue">₹0</div>
+                                <div class="metric-trend"><svg class="ic" aria-hidden="true">
+                                        <use href="#i-trend" />
+                                    </svg> <span id="admKpiRevenueTrend">Last 7 days</span></div>
+                            </div>
+                            <div class="metric-icon-box green"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-rupee" />
+                                </svg></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h4>Total Orders</h4>
+                                <div class="metric-val" id="admKpiOrders">0</div>
+                                <div class="metric-trend"><svg class="ic" aria-hidden="true">
+                                        <use href="#i-box" />
+                                    </svg> Live tracking active</div>
+                            </div>
+                            <div class="metric-icon-box blue"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-bag" />
+                                </svg></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h4>Products in Catalog</h4>
+                                <div class="metric-val" id="admKpiProducts">15</div>
+                                <div class="metric-trend" id="admKpiLowStock">0 Low stock items</div>
+                            </div>
+                            <div class="metric-icon-box amber"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-box" />
+                                </svg></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h4>Unique Customers</h4>
+                                <div class="metric-val" id="admKpiCustomers">0</div>
+                                <div class="metric-trend"><svg class="ic" aria-hidden="true">
+                                        <use href="#i-users" />
+                                    </svg> Active buyers</div>
+                            </div>
+                            <div class="metric-icon-box purple"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-star" />
+                                </svg></div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Sales Graph -->
+                    <div class="admin-chart-card">
+                        <div class="admin-chart-header">
+                            <div>
+                                <h3>7-Day Revenue &amp; Orders Performance</h3>
+                                <span class="chart-subtitle" id="admChartSubtitle">Last 7 days · cancelled orders
+                                    excluded</span>
+                            </div>
+                            <div class="chart-legend">
+                                <span><i class="lg-line"></i>Revenue</span>
+                                <span><i class="lg-bar"></i>Orders</span>
+                            </div>
+                        </div>
+                        <div class="chart-summary">
+                            <div><span>Revenue</span><strong id="admChart7Rev">₹0</strong></div>
+                            <div><span>Orders</span><strong id="admChart7Orders">0</strong></div>
+                            <div><span>Avg. order</span><strong id="admChart7Aov">₹0</strong></div>
+                        </div>
+                        <div class="chart-canvas-wrap" role="img" aria-label="Revenue and orders for the last 7 days">
+                            <canvas id="admSalesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders Quick Table -->
+                    <div class="admin-table-card">
+                        <div class="admin-table-header">
+                            <h3>Recent Orders</h3>
+                            <button class="btn-admin-secondary" id="admViewAllOrdersBtn">View All in Orders Tab <svg
+                                    class="ic" aria-hidden="true">
+                                    <use href="#i-arrow-right" />
+                                </svg></button>
+                        </div>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Items</th>
+                                    <th>Amount</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admRecentOrdersTbody">
+                                <!-- Dynamically Populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- PANE 2: PRODUCTS CATALOG (CRUD) -->
+                <section class="admin-pane" id="admPaneProducts">
+                    <div class="admin-page-header">
+                        <div>
+                            <h1>Product Inventory &amp; Catalog Management</h1>
+                            <p>Add, edit, remove products, update prices, MRP and manage stock counts.</p>
+                        </div>
+                        <div class="admin-actions-bar">
+                            <button class="btn-admin-primary" id="admOpenAddProductModalBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-plus" />
+                                </svg> Add Product
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <div class="admin-table-header">
+                            <div style="display:flex; align-items:center; gap:12px">
+                                <input type="text" id="admProductSearchInput" class="admin-search-input"
+                                    placeholder="Search catalog...">
+                                <select id="admProductCatFilter" style="padding:6px 12px; font-size:13px">
+                                    <option value="ALL">All Categories</option>
+                                </select>
+                            </div>
+                            <span id="admProductCountSummary" style="font-size:13px; color:#6c757d">15 Products</span>
+                        </div>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Thumb</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>MRP</th>
+                                    <th>Stock</th>
+                                    <th>Z-Assured</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admProductsTbody">
+                                <!-- Rendered dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- PANE 3: ORDERS MANAGEMENT -->
+                <section class="admin-pane" id="admPaneOrders">
+                    <div class="admin-page-header">
+                        <div>
+                            <h1>Customer Orders &amp; Fulfillment</h1>
+                            <p>Track incoming purchases, update tracking statuses, and inspect buyer delivery details.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <div class="admin-table-header">
+                            <input type="text" id="admOrderSearchInput" class="admin-search-input"
+                                placeholder="Search orders by ID or Name...">
+                            <span id="admOrderCountSummary" style="font-size:13px; color:#6c757d">0 Orders</span>
+                        </div>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Customer &amp; Phone</th>
+                                    <th>Destination</th>
+                                    <th>Items Ordered</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admOrdersTbody">
+                                <!-- Rendered dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- PANE 4: COUPONS & DISCOUNTS -->
+                <section class="admin-pane" id="admPaneCoupons">
+                    <div class="admin-page-header">
+                        <div>
+                            <h1>Discount Coupons &amp; Promotional Codes</h1>
+                            <p>Create customer discount codes with percentage or flat rate savings.</p>
+                        </div>
+                        <div class="admin-actions-bar">
+                            <button class="btn-admin-primary" id="admOpenAddCouponModalBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-plus" />
+                                </svg> Create Coupon
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <div class="admin-table-header">
+                            <h3>Active Store Coupons</h3>
+                        </div>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Discount</th>
+                                    <th>Min Order</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admCouponsTbody">
+                                <!-- Rendered dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- PANE 5: CUSTOMER DIRECTORY -->
+                <section class="admin-pane" id="admPaneCustomers">
+                    <div class="admin-page-header">
+                        <div>
+                            <h1>Customer Directory</h1>
+                            <p>Customers who have placed orders in your store.</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <div class="admin-table-header">
+                            <h3>Registered &amp; Checkout Customers</h3>
+                        </div>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Contact Phone</th>
+                                    <th>Delivery City</th>
+                                    <th>Total Orders</th>
+                                    <th>Lifetime Spend</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admCustomersTbody">
+                                <!-- Rendered dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- PANE 6: STORE & CREATOR SETTINGS -->
+                <section class="admin-pane" id="admPaneSettings">
+                    <div class="admin-page-header">
+                        <div>
+                            <h1>Store &amp; Creator Configuration</h1>
+                            <p>Set your custom creator branding, store parameters, and security passcodes.</p>
+                        </div>
+                        <div class="admin-actions-bar">
+                            <button class="btn-admin-primary" id="admSaveSettingsBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-save" />
+                                </svg> Save Changes
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="admin-form-grid"
+                        style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid var(--border-light); margin-bottom:24px;">
+                        <div class="admin-form-group full">
+                            <h3
+                                style="color:var(--zv-blue); border-bottom:1px solid var(--border-subtle); padding-bottom:8px">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-crown" />
+                                </svg> Creator Identity &amp; Attribution Settings
+                            </h3>
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgCreatorName">Your Name (Store Creator)</label>
+                            <input type="text" id="cfgCreatorName" placeholder="Enter your full name or handle">
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgCreatorTitle">Your Professional Title / Role</label>
+                            <input type="text" id="cfgCreatorTitle"
+                                placeholder="e.g. Lead Software Architect &amp; Founder">
+                        </div>
+
+                        <div class="admin-form-group full">
+                            <label for="cfgCreatorBio">Creator Bio (Displayed in Showcase &amp; Footer)</label>
+                            <textarea id="cfgCreatorBio" rows="3"
+                                placeholder="A brief statement about how you built this store..."></textarea>
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgCreatorPortfolio">Portfolio or Contact URL</label>
+                            <input type="text" id="cfgCreatorPortfolio"
+                                placeholder="https://yourportfolio.com or your email">
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgShowCreatorBadge">Display Creator Attribution on Storefront?</label>
+                            <select id="cfgShowCreatorBadge">
+                                <option value="true">Yes, proudly display 'Created by [My Name]'</option>
+                                <option value="false">Hide top banner</option>
+                            </select>
+                        </div>
+
+                        <div class="admin-form-group full" style="margin-top:16px">
+                            <h3
+                                style="color:var(--zv-blue); border-bottom:1px solid var(--border-subtle); padding-bottom:8px">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-store" />
+                                </svg> Store Identity &amp; Shipping Rules
+                            </h3>
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgStoreName">Store Brand Name</label>
+                            <input type="text" id="cfgStoreName" value="Zenvora">
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgFreeShippingMin">Free Delivery Threshold (₹)</label>
+                            <input type="number" id="cfgFreeShippingMin" value="500">
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgDeliveryFee">Standard Delivery Fee (₹)</label>
+                            <input type="number" id="cfgDeliveryFee" value="40">
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label for="cfgAdminPin">Admin Access PIN / Password</label>
+                            <input type="text" id="cfgAdminPin" value="admin123">
+                        </div>
+                    </div>
+
+                    <!-- Data Backup & Restore -->
+                    <div
+                        style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid var(--border-light)">
+                        <h3 style="margin-bottom:12px"><svg class="ic" aria-hidden="true">
+                                <use href="#i-box" />
+                            </svg> Data Backup &amp; Portability</h3>
+                        <p style="font-size:13px; color:#6c757d; margin-bottom:16px">
+                            Export your full store configuration, products catalog, and orders database as a JSON file,
+                            or restore
+                            from backup anytime.
+                        </p>
+                        <div style="display:flex; gap:12px">
+                            <button class="btn-admin-secondary" id="admExportDataBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-download" />
+                                </svg> Export Store JSON Backup
+                            </button>
+                            <button class="btn-admin-secondary" id="admImportDataBtn">
+                                <svg class="ic" aria-hidden="true">
+                                    <use href="#i-upload" />
+                                </svg> Import JSON Data
+                            </button>
+                            <input type="file" id="admImportFileInput" accept=".json" hidden>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div> <!-- End #adminViewRoot -->
+
+
+    <!-- =========================================================================
+       7. PRODUCT DETAILS MODAL (PDP)
+       ========================================================================= -->
+    <div class="modal-overlay" id="productDetailModalOverlay">
+        <div class="product-detail-modal" id="productDetailModal">
+            <button class="modal-close-btn" id="closePdpModalBtn" aria-label="Close modal"><svg class="ic"
+                    aria-hidden="true">
+                    <use href="#i-x" />
+                </svg></button>
+
+            <div class="pdp-grid">
+                <!-- Left: Gallery & Sticky Buy Action -->
+                <div class="pdp-gallery-col">
+                    <div class="pdp-main-image-box">
+                        <img id="pdpMainImg" src="" alt="Product View">
+                    </div>
+                    <div class="pdp-thumb-strip" id="pdpThumbStrip">
+                        <!-- Dynamically populated thumbnails -->
+                    </div>
+                    <div class="pdp-sticky-cta-row">
+                        <button class="btn-pdp-cart" id="pdpAddToCartBtn">
+                            <span><svg class="ic" aria-hidden="true">
+                                    <use href="#i-cart" />
+                                </svg></span> ADD TO CART
+                        </button>
+                        <button class="btn-pdp-buy" id="pdpBuyNowBtn">
+                            <span><svg class="ic" aria-hidden="true">
+                                    <use href="#i-bolt" />
+                                </svg></span> BUY NOW
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Info, Price, Delivery & Specs -->
+                <div class="pdp-info-col">
+                    <div class="pdp-breadcrumb" id="pdpBreadcrumb">Home › Electronics › Smart Devices</div>
+                    <h1 class="pdp-title" id="pdpTitle">Product Name</h1>
+
+                    <div class="pdp-rating-row">
+                        <span class="rating-pill" id="pdpRating"><svg class="ic" aria-hidden="true">
+                                <use href="#i-star" />
+                            </svg> 4.5</span>
+                        <span class="review-count" id="pdpReviewsText">14,290 Ratings &amp; 1,842 Reviews</span>
+                        <span class="f-assured-pill" id="pdpAssuredBadge"><svg class="ic" aria-hidden="true">
+                                <use href="#i-shield" />
+                            </svg> Assured</span>
+                    </div>
+
+                    <div class="pdp-price-box">
+                        <div class="pdp-price-row">
+                            <span class="pdp-main-price" id="pdpPrice">₹24,999</span>
+                            <span class="pdp-old-price" id="pdpMrp">₹32,999</span>
+                            <span class="pdp-off-tag" id="pdpOff">24% off</span>
+                        </div>
+                        <div class="pdp-savings-note" id="pdpSaveNote">You save ₹8,000 on this order!</div>
+                    </div>
+
+                    <!-- Bank Offers -->
+                    <div class="pdp-offers-box">
+                        <h4><svg class="ic" aria-hidden="true">
+                                <use href="#i-tag" />
+                            </svg> Available Offers</h4>
+                        <div class="offer-bullet">
+                            <span class="offer-tag-icon"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-sparkle" />
+                                </svg></span>
+                            <span><strong>Bank Offer:</strong> 10% instant discount on SBI &amp; HDFC Credit Cards, up
+                                to
+                                ₹1,500.</span>
+                        </div>
+                        <div class="offer-bullet">
+                            <span class="offer-tag-icon"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-sparkle" />
+                                </svg></span>
+                            <span><strong>Partner Offer:</strong> Sign up for Zenvora Pay Later &amp; get free ₹250
+                                Zenvora Gift
+                                Card.</span>
+                        </div>
+                        <div class="offer-bullet">
+                            <span class="offer-tag-icon"><svg class="ic" aria-hidden="true">
+                                    <use href="#i-sparkle" />
+                                </svg></span>
+                            <span><strong>No Cost EMI:</strong> Available on leading credit cards starting at
+                                ₹2,100/month.</span>
+                        </div>
+                    </div>
+
+                    <!-- Pincode Delivery Check -->
+                    <div class="pdp-delivery-check">
+                        <span><svg class="ic" aria-hidden="true">
+                                <use href="#i-truck" />
+                            </svg> Delivery:</span>
+                        <div class="pdp-pin-input-group">
+                            <input type="text" id="pdpPincodeInput" class="pdp-pin-input" placeholder="Enter Pincode"
+                                maxlength="6">
+                            <button class="pdp-pin-btn" id="pdpCheckPinBtn">Check</button>
+                        </div>
+                        <div class="pdp-delivery-status" id="pdpDeliveryStatus">
+                            Delivery by <b>Tomorrow, 5 PM</b> | Free Delivery
+                        </div>
+                    </div>
+
+                    <!-- Product Highlights & Specs -->
+                    <div class="pdp-specs-box">
+                        <h4>Product Specifications</h4>
+                        <table class="specs-table" id="pdpSpecsTable">
+                            <!-- Dynamically populated -->
+                        </table>
+                    </div>
+
+                    <!-- Customer Reviews -->
+                    <div class="pdp-reviews-box">
+                        <h4>Ratings &amp; Verified Reviews</h4>
+                        <div id="pdpReviewsList">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================================
+       8. CART DRAWER (ZENVORA STYLE)
+       ========================================================================= -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3><span><svg class="ic" aria-hidden="true">
+                        <use href="#i-cart" />
+                    </svg></span> My Cart (<span id="cartCountTitle">0</span>)</h3>
+            <button class="cart-drawer-close" id="closeCartBtn"><svg class="ic" aria-hidden="true">
+                    <use href="#i-x" />
+                </svg></button>
+        </div>
+
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <!-- Items dynamically injected -->
+        </div>
+
+        <!-- Sticky Cart Footer -->
+        <div class="cart-drawer-footer" id="cartDrawerFooter">
+            <div class="cart-footer-total">
+                <span>Total Payable</span>
+                <b id="cartFooterTotal">₹0</b>
+            </div>
+            <button class="checkout-btn-main" id="cartProceedCheckoutBtn">
+                PLACE ORDER
+            </button>
+        </div>
+    </aside>
+
+
+    <!-- =========================================================================
+       9. MULTI-STEP CHECKOUT MODAL
+       ========================================================================= -->
+    <div class="modal-overlay" id="checkoutModalOverlay">
+        <div class="checkout-modal">
+            <div class="checkout-modal-header">
+                <h2><span><svg class="ic" aria-hidden="true">
+                            <use href="#i-bolt" />
+                        </svg></span> Secure Checkout</h2>
+                <button class="modal-close-btn" id="closeCheckoutModalBtn"
+                    style="position:static; background:rgba(255,255,255,0.2); color:#fff"><svg class="ic"
+                        aria-hidden="true">
+                        <use href="#i-x" />
+                    </svg></button>
+            </div>
+
+            <div class="checkout-layout">
+                <div class="checkout-steps-column">
+
+                    <!-- Step 1: Delivery Address -->
+                    <div class="checkout-step-card">
+                        <div class="checkout-step-title">
+                            <span class="step-num-badge">1</span>
+                            <span>DELIVERY ADDRESS</span>
+                        </div>
+                        <form id="checkoutAddressForm" class="co-form-grid" novalidate>
+                            <div class="co-field">
+                                <label for="coName">Full Name *</label>
+                                <input type="text" id="coName" name="coName" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="co-field">
+                                <label for="coPhone">10-Digit Mobile Number *</label>
+                                <input type="tel" id="coPhone" name="coPhone" placeholder="9876543210" maxlength="10"
+                                    required>
+                            </div>
+                            <div class="co-field">
+                                <label for="coPincode">6-Digit Pincode *</label>
+                                <input type="text" id="coPincode" name="coPincode" placeholder="400001" maxlength="6"
+                                    required>
+                            </div>
+                            <div class="co-field">
+                                <label for="coCity">City / District *</label>
+                                <input type="text" id="coCity" name="coCity" placeholder="Mumbai" required>
+                            </div>
+                            <div class="co-field full">
+                                <label for="coAddress">House No., Building, Street Area *</label>
+                                <textarea id="coAddress" name="coAddress" rows="2"
+                                    placeholder="Flat 402, Sunshine Heights, MG Road" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 2: Order Items Summary Preview -->
+                    <div class="checkout-step-card">
+                        <div class="checkout-step-title">
+                            <span class="step-num-badge">2</span>
+                            <span>ORDER SUMMARY</span>
+                        </div>
+                        <div id="checkoutItemsList" style="display:flex; flex-direction:column; gap:8px">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Payment Method Options -->
+                    <div class="checkout-step-card">
+                        <div class="checkout-step-title">
+                            <span class="step-num-badge">3</span>
+                            <span>PAYMENT OPTIONS</span>
+                        </div>
+                        <div class="payment-tabs" id="paymentTabs">
+
+                            <label class="payment-tab-row selected">
+                                <input type="radio" name="checkoutPayment" value="upi" checked>
+                                <div class="payment-tab-info">
+                                    <b>UPI (Google Pay, PhonePe, Paytm, QR)</b>
+                                    <small>Instant &amp; 100% secure payment</small>
+                                </div>
+                            </label>
+                            <div class="payment-detail-pane" id="paneUpi">
+                                <div style="display:flex; gap:8px">
+                                    <input type="text" id="coUpiId" placeholder="username@okhdfcbank" style="flex:1">
+                                    <button class="slide-cta-btn" id="verifyUpiBtn"
+                                        style="padding:6px 14px; font-size:12px">Verify
+                                        UPI</button>
+                                </div>
+                            </div>
+
+                            <label class="payment-tab-row">
+                                <input type="radio" name="checkoutPayment" value="card">
+                                <div class="payment-tab-info">
+                                    <b>Credit / Debit / ATM Card</b>
+                                    <small>Visa, MasterCard, Rupay</small>
+                                </div>
+                            </label>
+                            <div class="payment-detail-pane" id="paneCard" hidden>
+                                <div style="display:flex; flex-direction:column; gap:8px">
+                                    <input type="text" id="coCardNum" placeholder="Card Number (4111 1111 1111 1111)"
+                                        maxlength="19">
+                                    <div style="display:flex; gap:8px">
+                                        <input type="text" id="coCardExp" placeholder="MM/YY" maxlength="5"
+                                            style="width:100px">
+                                        <input type="password" id="coCardCvv" placeholder="CVV" maxlength="3"
+                                            style="width:80px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label class="payment-tab-row">
+                                <input type="radio" name="checkoutPayment" value="cod">
+                                <div class="payment-tab-info">
+                                    <b>Cash on Delivery (COD)</b>
+                                    <small>Pay cash at your doorstep upon arrival</small>
+                                </div>
+                            </label>
+                            <div class="payment-detail-pane" id="paneCod" hidden>
+                                <p style="font-size:12px; color:var(--text-light)">You can pay via Cash or UPI QR to the
+                                    delivery agent
+                                    when your order arrives.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Side: Zenvora Price Summary Column -->
+                <div class="checkout-summary-column">
+                    <div class="price-breakdown-card">
+                        <h4>PRICE DETAILS</h4>
+                        <div class="breakdown-row">
+                            <span id="coSumItemsLabel">Price (1 Item)</span>
+                            <span id="coSumMrpTotal">₹0</span>
+                        </div>
+                        <div class="breakdown-row discount-green">
+                            <span>Discount on MRP</span>
+                            <span id="coSumDiscount">-₹0</span>
+                        </div>
+                        <div class="breakdown-row delivery-row">
+                            <span>Delivery Charges</span>
+                            <b id="coSumDelivery">FREE</b>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Secured Packaging Fee</span>
+                            <span>₹29</span>
+                        </div>
+                        <div class="breakdown-total-row">
+                            <span>Total Payable</span>
+                            <span id="coSumFinalPayable">₹0</span>
+                        </div>
+                        <div class="savings-guarantee-note" id="coSumSavingsNote">
+                            You will save ₹0 on this order
+                        </div>
+                        <button class="checkout-btn-main" id="coSubmitPaymentBtn" style="width:100%; margin-top:16px">
+                            CONFIRM &amp; PAY ₹0
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================================
+       10. ORDER CELEBRATION SUCCESS MODAL
+       ========================================================================= -->
+    <div class="modal-overlay" id="orderSuccessModalOverlay">
+        <div class="order-success-card">
+            <div class="success-icon-wrap"><svg class="ic" aria-hidden="true">
+                    <use href="#i-check" />
+                </svg></div>
+            <h2 class="order-success-title">Order Placed Successfully!</h2>
+            <p style="color:var(--text-muted); margin-bottom:12px">Your order has been confirmed and packed for
+                shipment.</p>
+            <div class="order-id-highlight" id="successOrderIdDisplay">Order ID: OD4829104820194</div>
+            <p style="font-size:14px; margin-bottom:24px">Estimated Delivery by: <strong
+                    id="successDeliveryDate">Friday, 10
+                    Oct</strong></p>
+
+            <div style="display:flex; justify-content:center; gap:12px">
+                <button class="btn-admin-primary" id="trackOrderSuccessBtn">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-box" />
+                    </svg> Track My Order
+                </button>
+                <button class="btn-admin-secondary" id="continueShoppingSuccessBtn">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-store" />
+                    </svg> Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================================
+       11. MY ORDERS & LIVE TRACKING MODAL
+       ========================================================================= -->
+    <div class="modal-overlay" id="ordersTrackingModalOverlay">
+        <div class="checkout-modal" style="max-width:820px">
+            <div class="checkout-modal-header">
+                <h2><span><svg class="ic" aria-hidden="true">
+                            <use href="#i-box" />
+                        </svg></span> My Orders &amp; Shipment Tracking</h2>
+                <button class="modal-close-btn" id="closeOrdersModalBtn"
+                    style="position:static; background:rgba(255,255,255,0.2); color:#fff"><svg class="ic"
+                        aria-hidden="true">
+                        <use href="#i-x" />
+                    </svg></button>
+            </div>
+            <div style="padding:20px" id="myOrdersContainer">
+                <!-- Rendered by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================================
+       12. CREATOR SPOTLIGHT SHOWCASE MODAL
+       ========================================================================= -->
+    <div class="modal-overlay" id="creatorModalOverlay">
+        <div class="admin-modal-card" style="max-width:560px; text-align:center">
+            <div
+                style="width:72px; height:72px; background:linear-gradient(135deg, var(--zv-blue), #172337); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin:0 auto 16px;">
+                <svg class="ic" aria-hidden="true">
+                    <use href="#i-crown" />
+                </svg>
+            </div>
+            <h2 style="font-size:22px; font-weight:800; margin-bottom:4px" id="spotlightCreatorName">Store Creator &amp;
+                Admin
+            </h2>
+            <p style="color:var(--zv-blue); font-weight:700; font-size:14px; margin-bottom:14px"
+                id="spotlightCreatorTitle">
+                Lead Software Architect &amp; Store Owner</p>
+            <p style="font-size:13px; color:#555; line-height:1.6; margin-bottom:20px; text-align:left; background:#f7f9fd; padding:16px; border-radius:8px; border:1px solid #e0e8f8"
+                id="spotlightCreatorBio">
+                This high-performance, e-commerce platform and executive backoffice administration suite was designed,
+                architected, and engineered from scratch. Features include interactive catalog browsing, instant search
+                autosuggest, deals countdown, cart management, simulated checkout gateway, order fulfillment timeline,
+                and live
+                inventory control.
+            </p>
+
+            <div style="text-align:left; margin-bottom:20px">
+                <h4 style="font-size:12px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px">
+                    ENGINEERED WITH
+                    MODERN STACK:</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:8px">
+                    <span class="bank-badge">HTML5 Semantic Engine</span>
+                    <span class="bank-badge">Vanilla CSS3 Design System</span>
+                    <span class="bank-badge">Modular Reactive JavaScript</span>
+                    <span class="bank-badge">HTML5 Canvas Analytics</span>
+                    <span class="bank-badge">LocalStorage Database</span>
+                    <span class="bank-badge">Zenvora Z-Assured UX</span>
+                </div>
+            </div>
+
+            <div style="display:flex; justify-content:center; gap:12px">
+                <button class="btn-admin-primary" id="spotlightAdminLoginBtn">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-lock" />
+                    </svg> Open My Admin Panel
+                </button>
+                <button class="btn-admin-secondary" id="closeCreatorModalBtn">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+       13. ADMIN ACCESS PIN SECURITY GATE MODAL
+       ========================================================================= -->
+    <div class="modal-overlay" id="adminAuthModalOverlay">
+        <div class="admin-modal-card" style="max-width:400px; text-align:center">
+            <div style="font-size:42px; margin-bottom:12px"><svg class="ic" aria-hidden="true">
+                    <use href="#i-lock" />
+                </svg></div>
+            <h3 style="font-size:18px; font-weight:800; margin-bottom:6px">Owner Admin Access</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:18px">
+                This administration console is private to the store owner. Please enter your secret PIN to authenticate.
+            </p>
+
+            <div style="margin-bottom:16px">
+                <input type="password" id="adminPinInput" placeholder="Enter Admin PIN (Default: admin123)"
+                    style="width:100%; text-align:center; font-size:16px; letter-spacing:2px">
+                <div id="adminAuthError"
+                    style="color:var(--zv-red); font-size:12px; font-weight:600; margin-top:6px; min-height:16px"></div>
+            </div>
+
+            <div style="display:flex; gap:10px">
+                <button class="btn-admin-primary" id="adminVerifyPinBtn" style="flex:1; justify-content:center">
+                    Unlock Console
+                </button>
+                <button class="btn-admin-secondary" id="closeAdminAuthBtn">
+                    Cancel
+                </button>
+            </div>
+            <p style="font-size:11px; color:#888; margin-top:12px">Default demo PIN: <strong>admin123</strong>
+                (Changeable in
+                settings)</p>
+        </div>
+    </div>
+
+
+    <!-- =========================================================================
+       14. ADD / EDIT PRODUCT MODAL (ADMIN ONLY)
+       ========================================================================= -->
+    <div class="modal-overlay" id="adminProductModalOverlay">
+        <div class="admin-modal-card">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px">
+                <h3 id="admProductModalTitle">Add New Product to Catalog</h3>
+                <button class="modal-close-btn" id="closeAdmProductModalBtn" style="position:static"><svg class="ic"
+                        aria-hidden="true">
+                        <use href="#i-x" />
+                    </svg></button>
+            </div>
+
+            <form id="admProductForm" class="admin-form-grid">
+                <input type="hidden" id="prodFormId">
+
+                <div class="admin-form-group full">
+                    <label for="prodFormName">Product Name / Title *</label>
+                    <input type="text" id="prodFormName" placeholder="e.g. Apple iPhone 15 Pro Max (256 GB)" required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormCat">Category *</label>
+                    <select id="prodFormCat" required>
+                        <!-- Populated dynamically -->
+                    </select>
+                    <div class="new-cat-row" id="newCatRow" hidden>
+                        <input type="text" id="newCatInput" maxlength="24"
+                            placeholder="New category, e.g. Toys, Grocery" autocomplete="off">
+                        <button type="button" class="btn-admin-primary" id="newCatAddBtn">Add</button>
+                        <button type="button" class="btn-admin-secondary" id="newCatCancelBtn">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormBrand">Brand *</label>
+                    <input type="text" id="prodFormBrand" placeholder="e.g. Apple, Samsung, Nike" required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormPrice">Selling Price (₹) *</label>
+                    <input type="number" id="prodFormPrice" min="1" placeholder="24999" required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormMrp">Original MRP (₹) *</label>
+                    <input type="number" id="prodFormMrp" min="1" placeholder="32999" required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormStock">Inventory Stock *</label>
+                    <input type="number" id="prodFormStock" min="0" value="50" required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormRating">Initial Customer Rating</label>
+                    <input type="number" id="prodFormRating" min="1" max="5" step="0.1" value="4.5">
+                </div>
+
+                <div class="admin-form-group full">
+                    <label for="prodFormFiles">Product photos &mdash; real images, up to 5 (first one is the main photo)
+                        *</label>
+                    <input type="file" id="prodFormFiles" accept="image/*" multiple>
+                    <div id="prodImgPreview" class="img-preview"></div>
+                    <label for="prodFormImage" style="margin-top:6px">Or paste an image link (optional)</label>
+                    <input type="url" id="prodFormImage" placeholder="https://...">
+                </div>
+
+                <div class="admin-form-group full">
+                    <label for="prodFormDesc">Product Description *</label>
+                    <textarea id="prodFormDesc" rows="3"
+                        placeholder="Provide a compelling description of the product features..." required></textarea>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormAssured">Zenvora Assured (Z-Assured)?</label>
+                    <select id="prodFormAssured">
+                        <option value="true">Yes, Z-Assured Certified</option>
+                        <option value="false">Standard Seller</option>
+                    </select>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="prodFormBadge">Badge / Tag</label>
+                    <input type="text" id="prodFormBadge" placeholder="e.g. Best Seller, Top Deal, New">
+                </div>
+
+                <div class="admin-form-group full"
+                    style="display:flex; justify-content:flex-end; gap:10px; margin-top:12px">
+                    <button type="button" class="btn-admin-secondary" id="cancelAdmProductBtn">Cancel</button>
+                    <button type="submit" class="btn-admin-primary" id="saveAdmProductBtn">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- =========================================================================
+       15. CREATE COUPON MODAL (ADMIN ONLY)
+       ========================================================================= -->
+    <div class="modal-overlay" id="adminCouponModalOverlay">
+        <div class="admin-modal-card" style="max-width:480px">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px">
+                <h3>Create New Discount Coupon</h3>
+                <button class="modal-close-btn" id="closeAdmCouponModalBtn" style="position:static"><svg class="ic"
+                        aria-hidden="true">
+                        <use href="#i-x" />
+                    </svg></button>
+            </div>
+
+            <form id="admCouponForm" class="admin-form-grid">
+                <div class="admin-form-group full">
+                    <label for="couponFormCode">Coupon Code (e.g. ZENVORA20) *</label>
+                    <input type="text" id="couponFormCode" placeholder="ZENVORA20" style="text-transform:uppercase"
+                        required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="couponFormType">Discount Type</label>
+                    <select id="couponFormType">
+                        
+                        <option value="percent">Percentage (%)</option>
+                        <option value="flat">Flat Amount (₹)</option>
+                    </select>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="couponFormValue">Discount Value *</label>
+                    <input type="number" id="couponFormValue" min="1" placeholder="20" required>
+                </div>
+
+                <div class="admin-form-group full">
+                    <label for="couponFormMinSpend">Minimum Order Value (₹)</label>
+                    <input type="number" id="couponFormMinSpend" min="0" value="1000" required>
+                </div>
+
+                <div class="admin-form-group full"
+                    style="display:flex; justify-content:flex-end; gap:10px; margin-top:12px">
+                    <button type="button" class="btn-admin-secondary" id="cancelAdmCouponBtn">Cancel</button>
+                    <button type="submit" class="btn-admin-primary">Create Coupon</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-notice" id="globalToast" role="status" aria-live="polite"><span id="toastIcon"><svg class="ic"
+                aria-hidden="true">
+                <use href="#i-info" />
+            </svg></span><span id="toastMessage">Action completed successfully</span></div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
