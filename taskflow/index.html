@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>TaskFlow – simple task manager</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <span class="logo">TaskFlow</span>
+            <div class="right">
+                <span class="tag" id="sess" hidden></span>
+                <button class="ghost" id="signOut" type="button" hidden>Sign out</button>
+                <button class="ghost" id="theme" type="button" aria-label="Toggle dark mode">Theme</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <!-- Auth view -->
+        <section id="authView" class="card auth" aria-labelledby="authH">
+            <h1 id="authH">Keep your day in order</h1>
+            <p class="tag">Create an account to start your own task list. Everything stays in this browser.</p>
+            <div class="tabs" role="group" aria-label="Choose form">
+                <button type="button" class="ghost on" id="tabIn" aria-pressed="true">Sign in</button>
+                <button type="button" class="ghost" id="tabUp" aria-pressed="false">Create account</button>
+            </div>
+            <form id="authForm" novalidate>
+                <div class="field" id="nameF" hidden><label for="name">Name</label><input id="name" autocomplete="name">
+                </div>
+                <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email">
+                </div>
+                <div class="field"><label for="pw">Password (8+ characters)</label><input id="pw" type="password"
+                        autocomplete="current-password"></div>
+                <button type="submit" id="go">Sign in</button>
+                <p class="msg" id="authMsg" role="status"></p>
+            </form>
+        </section>
+
+        <!-- App view -->
+        <section id="appView" hidden aria-label="Your tasks">
+            <h2 id="hello" style="font-size:1.8rem;margin-bottom:1rem"></h2>
+            <div class="stats" id="stats" aria-live="polite"></div>
+            <form class="card add" id="addForm" novalidate>
+                <div class="field f1" style="margin:0"><label for="title">New task</label><input id="title"
+                        maxlength="120" placeholder="What needs doing?"></div>
+                <div class="field" style="margin:0"><label for="pri">Priority</label>
+                    <select id="pri">
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="field" style="margin:0"><label for="due">Due date</label><input id="due" type="date"></div>
+                <button type="submit">Add</button>
+            </form>
+            <p class="msg" id="appMsg" role="status"></p>
+            <div class="bar" id="bar">
+                <div role="group" aria-label="Filter tasks" style="display:flex;gap:.4rem">
+                    <button type="button" class="ghost" data-f="all" aria-pressed="true">All</button>
+                    <button type="button" class="ghost" data-f="active" aria-pressed="false">Active</button>
+                    <button type="button" class="ghost" data-f="done" aria-pressed="false">Done</button>
+                </div>
+                <input type="search" id="search" placeholder="Search tasks" aria-label="Search tasks">
+                <button type="button" class="ghost" id="clear">Clear done</button>
+            </div>
+            <ul class="tasks" id="list"></ul>
+        </section>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
